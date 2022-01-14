@@ -1,0 +1,225 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.75;
+  background-color: #E6E6E6;
+}
+.wrapper{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #E6E6E6;
+  clip-path: circle(25px at calc(100% - 45px) 45px);
+  transition: all 0.4s ease-in-out;
+  z-index: 1;
+}
+#active:checked ~ .wrapper{
+  clip-path: circle(75%);
+}
+.menu-btn{
+  position: absolute;
+  z-index: 2;
+  right: 20px;
+  top: 20px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+  background: #E6E6E6;
+  transition: all 0.3s ease-in-out;
+}
+#active:checked ~ .menu-btn{
+  color: #333;
+}
+#active:checked ~ .menu-btn i:before{
+  content: "\f00d";
+}
+#active:checked ~ .wrapper {
+  background: #333;
+  z-index: 1;
+}
+.wrapper ul{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+}
+.wrapper ul li{
+  margin: 21px 0;
+}
+.wrapper ul li a {
+  position: relative;
+  z-index: 5;
+  display: block;
+  width: 200px;
+  color: none;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 400;
+  padding: 0;
+  color: #E6E6E6;
+  border: 1px solid #E6E6E6;
+  position: relative;
+  line-height: 56px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+.wrapper ul li a:hover {
+  color: #333;
+}
+.wrapper ul li a:after{
+  position: absolute;
+  content: "";
+  background-color: #E6E6E6;
+  width: 0;
+  height: 100%;
+  left: -40%;
+  border-radius: 40px;
+  transform: skew(50deg);
+  z-index: -1;
+  transition-duration: 0.5s;
+  transform-origin: top left;
+}
+.wrapper ul li a:hover:after {
+  height: 120%;
+  width: 160%;
+}
+input[type="checkbox"]{
+  display: none;
+}
+#timeline {
+  display: flex;
+  background-color: #031625;
+}
+.tl-item {
+  transform: translate3d(0, 0, 0);
+  position: relative;
+  width: 25%;
+  height: 98vh;
+  min-height: 600px;
+  color: #FFF;
+  overflow: hidden;
+  transition: width 0.4s ease;
+  background-position: center center;
+}
+.tl-item:before, .tl-item:after {
+  content: '';
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+}
+.tl-item:before {
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 85%);
+  z-index: 1;
+  opacity: 0;
+  transform: translate3d(0, 0, 0) translateY(50%);
+}
+.tl-item:hover {
+    width: 30% !important;
+}
+.tl-item:hover:before {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease 0.25s;
+}
+.tl-item:hover .tl-content {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.4s ease 0.4s;
+}
+.tl-content {
+  transform: translate3d(0, 0, 0) translateY(25px);
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin: 0 1.618em;
+  top: 55%;
+  opacity: 0;
+}
+h1 {
+  text-transform: uppercase;
+  color: #1779cf;
+  font-size: 1.44rem;
+  font-weight: normal;
+}
+.tl-year {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1;
+}
+.tl-item:hover .tl-year {
+  transform: translateX(-50%)translateY(-100%);
+  transition: all 0.4s ease 0.4s;
+}
+.tl-year a {
+  display: block;
+  font-size: 30px;
+  padding: 0px 35px;
+  color: #FFF;
+  text-decoration: none;
+  border: 2px solid #FFF;
+}
+.tl-bg {
+  position: absolute;
+  width: 100%; height: 100%;
+  top: 0; left: 0;
+  background-size: cover;
+  background-position: center center;
+}
+/* FOREST, SEA, MOUNTAINS, PARKS */
+.img-slide {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 35%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  animation-duration: 1.5s;
+}
+.forest-img {
+  background-image: url("img/img-forest.jpg");
+}
+.sea-img {
+  background-image: url("img/img-sea.jpg");
+}
+.text {
+  position: absolute;
+  left: 35%;
+  top: 0;
+  width: 65%;
+  animation-duration: 2s;
+  text-align: center;
+}
+.text h1 {
+  width: 350px;
+  margin: 0 auto;
+  line-height: 90px;
+  font-size: 72px;
+  font-weight: 600;
+  margin-top: 20px;
+  border-bottom: 3px solid #333;
+}
+.text h2 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 7px;
+  letter-spacing: 4px;
+}
+.forest h1, .forest h2 {
+  color: #1e7b1e;
+  border-bottom-color: #1e7b1e;
+}
+.sea h1, .sea h2 {
+  color: #0066CC;
+  border-bottom-color: #0066CC;
+}
