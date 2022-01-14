@@ -80,16 +80,12 @@ body {
   background-color: #E6E6E6;
   width: 0;
   height: 100%;
-  left: -40%;
-  border-radius: 40px;
-  transform: skew(50deg);
+  left: 0%;
   z-index: -1;
   transition-duration: 0.5s;
-  transform-origin: top left;
 }
 .wrapper ul li a:hover:after {
-  height: 120%;
-  width: 160%;
+  width: 100%;
 }
 input[type="checkbox"]{
   display: none;
@@ -192,6 +188,9 @@ h1 {
 .sea-img {
   background-image: url("img/img-sea.jpg");
 }
+.mountains-img {
+  background-image: url("img/img-mountains.jpg");
+}
 .text {
   position: absolute;
   left: 35%;
@@ -222,4 +221,37 @@ h1 {
 .sea h1, .sea h2 {
   color: #0066CC;
   border-bottom-color: #0066CC;
+}
+.mountains h1, .mountains h2 {
+  color: #8C8C8C;
+  border-bottom-color: #8C8C8C;
+}
+.mountains h1 {
+  width: 530px;
+}
+.next, .previous {
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: 0.4s;
+}
+.previous {
+  right: 80px;
+}
+.next i, .previous i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+}
+.next:hover, .previous:hover {
+  background-color: #333;
+  color: #E6E6E6;
 }
