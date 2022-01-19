@@ -309,10 +309,21 @@ input[type="checkbox"]{
 }
 @media screen and (max-width: 980px) {
   .menu-btn{
-    height: 100px;
-    width: 100px;
+    height: 135px;
+    width: 135px;
     line-height: 100px;
-    font-size: 42px;
+    font-size: 58px;
+    top: 25px;
+    right: 25px;
+  }
+  .menu-btn i {
+    position: absolute;
+    top: 37px;
+    right: 42px;
+  }
+  #active:checked ~ .menu-btn i:before{
+    position: absolute;
+    right: 5px;
   }
   .wrapper ul li{
     margin: 50px 0;
