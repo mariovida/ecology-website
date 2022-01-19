@@ -10,6 +10,21 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Services - Website Template</title>
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Montserrat';
+        color: #333;
+      }
+      .delete {
+        position: absolute;
+        top: 40%;
+        left: 13%;
+        transform: translate(-50%, -50%);
+        font-weight: 600;
+        font-size: 54px;
+        border-bottom: 2px solid #333;
+      }
       body {
         background-color: #F2F2F2;
       }
@@ -51,6 +66,52 @@
       .work a:hover {
         background-color: #4D4D4D;
       }
+      @media screen and (max-width: 980px) {
+        .header{
+          width: 105%;
+          height:40%;
+          left:-3%;
+          position:absolute;
+          background-image: linear-gradient(#8459f9, #4c3196);
+          border-top-left-radius:10px;
+          border-top-right-radius:10px;
+          border-bottom-left-radius: 50% 20%;
+          border-bottom-right-radius: 50% 20%;
+        }
+        .container{
+          width: 100vw;
+          height:100vh;
+          background-color: #F2F2F2;
+          position:absolute;
+          top: 21%;
+          overflow:hidden;
+          left: 50%;
+          transform:translate(-50%,-25%);
+        }
+        img {
+          display: none;
+        }
+        .work {
+          width: 100%;
+          top: 10%;
+          left: 0;
+        }
+        .work h1 {
+          font-size: 6em;
+          line-height: inherit;
+          padding: 30px 0 0 0;
+        }
+        .work h3 {
+          font-size: 4em;
+          padding-top: 210px;
+        }
+        .work a {
+          width: 70%;
+          margin-top: 100px;
+          padding: 16px 0;
+          font-size: 3em;
+        }
+      }
     </style>
   </head>
   <body>
@@ -64,6 +125,10 @@
         <li><a href="./gallery.html">GALLERY</a></li>
         <li><a href="./contact.html">CONTACT</a></li>
       </ul>
+    </div>
+
+    <div class="container">
+      <div class="header"></div>
     </div>
 
     <img src="./img/progress.svg" />
