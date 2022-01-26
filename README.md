@@ -16,6 +16,12 @@
 ## Demo
 ### 🚀 [vercel.app](https://ecology-website.vercel.app)
 
+
+## Showcase
+![image](/img/screen_sea.png)
+![image](/img/screen_menu.png)
+
+
 ## Show your support
 
 Give a ⭐️ if this project helped you!
